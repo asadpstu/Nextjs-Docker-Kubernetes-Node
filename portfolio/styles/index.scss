@@ -109,6 +109,16 @@ html {
   padding: 0 11px 0.25em 11px;
   line-height: 1.6;
 }
+
+.fixed {
+  position:fixed;
+  bottom:0px;
+  width: 100%;
+  background-color: rgba(0,0,0,.9);
+  height: 30px;
+  color: wheat;
+  margin-top: 200px;
+}
   
 // Modifiers END
 

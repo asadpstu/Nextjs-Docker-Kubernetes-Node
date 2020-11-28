@@ -1,12 +1,15 @@
+import axios from 'axios';
 
-import Navbar from '@/components/shared/Navbar';
+const apiCall = async () =>{
+    const data = await axios.get('https://reqres.in/api/users?page=1');
+    return data;
+}
 
-const Portfolios = () => {
+const Portfolios = (props) => {
 
   return (
     <>
-      <Navbar />
-      <div className="container">
+        <div>{ props.testingData}</div>
         <section className="section-title">
           <div className="px-2">
             <div className="pt-5 pb-4">
@@ -54,9 +57,16 @@ const Portfolios = () => {
             </div>
           </div>
         </section>
-      </div>
     </>
   )
+}
+
+Portfolios.getInitialProps = async () =>{
+  const response = await apiCall();
+  const dataFromAPi = response.data.support.text;
+  return {
+    testingData : dataFromAPi
+  }
 }
 
 
