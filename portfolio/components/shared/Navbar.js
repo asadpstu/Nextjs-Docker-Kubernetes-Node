@@ -38,7 +38,7 @@ const AppNavbar = () => {
             <AppLink href="/" className="mr-3 nav-link">
               Signup
             </AppLink>
-            <AppLink href="/" className="mr-3 nav-link">
+            <AppLink href="/login" className="mr-3 nav-link">
               Signin
             </AppLink>
           </Nav>
