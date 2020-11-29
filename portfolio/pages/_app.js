@@ -21,8 +21,8 @@ const MyApp = ({ Component, pageProps }) => {
         <div>{pageProps.appData}</div>
         <Component {...pageProps} />
       </div>
-
-      {/* <Footer/> */}
+      { Component.name === 'Home' && <Footer/>}
+      
 
     </div>
   )
